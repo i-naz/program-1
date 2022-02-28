@@ -1,0 +1,65 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cURL</title>
+    <link rel='stylesheet' type = "text/css" media="screen" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    
+  </head>
+<body>
+
+<div id="container">
+<nav class="navbar navbar-light navbar-expand-lg bg-light justify-content-center">
+  <a class="navbar-brand" href="#">Countries Information</a>
+  <select class="country_list" id="select_country"></select>
+   </nav>
+</div> 
+<div class="main-container">
+
+    <div class="info-container">  
+      <p>Capital: <span id="capital"></span></p>
+      <p>Dialing Code: <span id="dialing-code"></span></p>
+      <p>Population: <span id="population"></span></p>
+      <p>Currencies: <span id="currencies"></span></p>
+      <p>Region: <span id="region"></span></p>
+      <p>Native Name: <span id="nativeName"></span></p>
+      <p>Latitude: <span id="Lat"></span></p>
+      <p>Longitude: <span id="Lon"></span></p>
+      
+    </div>
+    <div class="flag_container"></div>    
+    
+    <div class="weather_container">
+      <div class="col-md-30 mx-right mt-5p-20" style="box-shadow: 0px 0px 12px black">
+      <h5>Today's weather</h5>
+      <h6>
+        <span id="city_name"></span>
+      </h6>
+      <p>Temperature: <span id="city_temp"></span></p>
+      <p>Humidity: <span id="humidity"></span></p>
+      <p>Weather forecast: <span id="weather_forecast"></span></p>
+      <p>Timezone: <span id="time_zone"></span> </p>
+    </div>    
+    </div>
+    </div>
+<div id="map"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="weather.js"></script>
+<script src="country_data.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+<script>
+
+</script>
+
+</body>
+
+</html>
