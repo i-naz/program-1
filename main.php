@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 $executionStartTime = microtime(true);
 
-$url="http://api.openweathermap.org/data/2.5/weather?q=new%20york&appid=ef052287480cc83e2687fe1e34005e5f";
+$url='https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=2b16fa862a1ca44e187917563c894ed3';
 $ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

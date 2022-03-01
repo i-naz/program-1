@@ -36,11 +36,11 @@ $(document).ready(function(){
 
         function weatherUpdate(selectedCountry){
             let city = $('#capital').text();
-            let url = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=2b16fa862a1ca44e187917563c894ed3'
-            fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
+            let url = 'main.php';
+            //fetch(url)
+            //.then(response => response.json())
+            //.then(data => {
+                //console.log(data)
                 $('#city_name').text(data.name) 
                 let t = (parseFloat(data.main.temp) - 273.15).toFixed(2);
 
@@ -52,7 +52,7 @@ $(document).ready(function(){
                 $('#humidity').text(data.main.humidity) 
                 $('#weather_forecast').text(data.weather[0].description ?? '');
                 $('#time_zone').text(t_utc)
-            });
+            //});
         }
 
         $("#select_country").change(function(){
