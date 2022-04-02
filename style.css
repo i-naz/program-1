@@ -1,6 +1,10 @@
 .country_list{
   width: 30%;
 }
+
+ div .weather-container {
+  box-shadow: 0px 0px 12px black;
+}
  
 .main-container {
    box-sizing: border-box;
@@ -16,15 +20,15 @@
  }
   
 .info-container p{
-  font-size: 15;
-  line-height:15px;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 12px;
+  margin: 5px;
+  font-family: Arial, sans-serif; 
 }
 
 .flag_container img{
   border: 1px solid rgb(64, 79, 80);
-  height: 200px;
-  width: 300px;
+  height: 90px;
+  width: 130px;
 }
 .info-container span{
   font-weight: 700;
@@ -48,6 +52,11 @@
   bottom: 0;
 }
 
+.weather-paras {
+  margin: 5px;
+  font-size:12px;
+
+}
 
 /*  box-sizing: border-box;
 }

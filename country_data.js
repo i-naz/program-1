@@ -5,20 +5,24 @@ $(document).ready(function(){
         url:"countries.php",
         type:"get",
         success: function (data){
+            
             $.each(data.data, function(value) {
                 countriesData = data.data;
                 $("#select_country").append("<option>"+  countriesData[value].name + "</option>");
             });
+            console.log(countriesData[0]);
             renderInformation(countriesData[0].name);
             updateMap();
             weatherUpdate(countriesData[0].name);
         },
         error: function(error){
+            console.log('Request Unsuccessful!!');
             console.log(error);
             }
         });
 
          function renderInformation(selectedCountry){
+             console.log('fun');
             for(var i =0; i<countriesData.length; i++){
                 if(countriesData[i].name == selectedCountry){
                     $(".flag_container").html("<img src = '"+countriesData[i].flag+"'>" );
@@ -40,7 +44,7 @@ $(document).ready(function(){
              fetch(url)
              .then(response => response.json())
              .then(data => {
-                //console.log(data)
+                console.log(data)
                 $('#city_name').text(data.name) 
                 let t = (parseFloat(data.main.temp) - 273.15).toFixed(2);
 
@@ -87,5 +91,12 @@ $(document).ready(function(){
     });
 });
     
+
+//const latLngs = L.GeoJSON.coordsToLatLngs(data[0].geojson.coordinates,2); 
+//L.polyline(latLngs, {
+  //  color: "green",
+    //weight: 14,
+    //opacity: 1
+//}).addTo(map);  https://stackoverflow.com/questions/55308638/draw-country-border-on-leaflet-map-using-json-coordinates?msclkid=0d44644ea6ca11ec904b97725676b64f 
 
 
