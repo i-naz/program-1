@@ -14,11 +14,11 @@
   </head>
 <body>
 
-  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Launch static backdrop modal
-  </button> -->
+  </button>
 
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="country-data-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -29,7 +29,7 @@
              <div class="row">
                 <div class="col-12 col-md-4 ms-auto">
                   <div class="info-container">  
-                    <p>Capital: <span id="capital"></span></p>
+                    <p>Capital: <span id="capital-content"></span></p>
                     <p>Dialing Code: <span id="dialing-code"></span></p>
                     <p>Population: <span id="population" class="number-separator"></span></p>
                     <p>Currencies: <span id="currencies"></span></p>
@@ -85,7 +85,7 @@
 <div class="main-container">
 
     <div class="info-container">  
-      <p>Capital: <span id="capital"></span></p>
+      <!-- <p>Capital: <span id="capital"></span></p> -->
       <p>Dialing Code: <span id="dialing-code"></span></p>
       <p>Population: <span id="population" class="number-separator"></span></p>
       <p>Currencies: <span id="currencies"></span></p>
@@ -126,8 +126,8 @@ crossorigin="anonymous">
   </script>
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script src="weather.js"></script>
-<script src="country_data.js"></script>
-<script src="countries.php"></script>
+<script src="script.js"></script>
+<!-- <script src="countries.php"></script> -->
 
 </body>
 
