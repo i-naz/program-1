@@ -43,13 +43,18 @@
   width: 100%;
   height: 600px;
 } */
-#map {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
+#mymap {
+  /* padding-top: 0px;
+  padding-bottom: 0px; */
+  /* position: absolute; */
+  /* top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px; */
+  width: 100%;
+  height: 500px;
+
 }
 
 .weather-paras {

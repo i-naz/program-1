@@ -8,15 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <!-- Always should go under bootstrap -->
     <link rel='stylesheet' type = "text/css" media="screen" href="style.css">
-
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
     
   </head>
 <body>
 
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Launch static backdrop modal
-  </button>
+  </button> -->
 
   <div class="modal fade" id="country-data-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -31,7 +33,7 @@
                   <div class="info-container">  
                     <p>Capital: <span id="capital-content"></span></p>
                     <p>Dialing Code: <span id="dialing-code"></span></p>
-                    <p>Population: <span id="population" class="number-separator"></span></p>
+                    <p>Population: <span id="population"></span></p>
                     <p>Currencies: <span id="currencies"></span></p>
                     <p>Region: <span id="region"></span></p>
                     <p>Native Name: <span id="nativeName"></span></p>
@@ -50,7 +52,7 @@
                     <h6>
                       <span id="city_name"></span>
                     </h6>
-                    <p class="weather-paras">Temperature: <span id="city_temp"></span></p>
+                    <p class="weather-paras">Temperature: <i class="fa-solid fa-temperature-half"></i><span id="city_temp"></span></p>
                     <p class="weather-paras">Humidity: <span id="humidity"></span></p>
                     <p class="weather-paras">Weather forecast: <span id="weather_forecast"></span></p>
                     <p class="weather-paras">Timezone: <span id="time_zone"></span> </p>
@@ -59,9 +61,6 @@
                   </div>
                 </div>
               </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -77,15 +76,17 @@
       <a class="navbar-brand">Countries Information</a>
       <form class="d-flex align-items-center">
         <select class="form-control me-2" id="select_country">
+          <option>Select Country</option>
         </select>
       </form>
     </div>
   </nav>
+  <div id="mymap"></div>
 </div> 
-<div class="main-container">
+<!-- <div class="main-container">
 
     <div class="info-container">  
-      <!-- <p>Capital: <span id="capital"></span></p> -->
+      <p>Capital: <span id="capital"></span></p>
       <p>Dialing Code: <span id="dialing-code"></span></p>
       <p>Population: <span id="population" class="number-separator"></span></p>
       <p>Currencies: <span id="currencies"></span></p>
@@ -109,14 +110,18 @@
       <p>Timezone: <span id="time_zone"></span> </p>
     </div>    
     </div>
-    </div>
-<div id="map"></div>
+    </div> -->
+
   
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous">
   </script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin="">
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
 crossorigin="anonymous">
   </script>
@@ -124,9 +129,8 @@ crossorigin="anonymous">
 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
 crossorigin="anonymous">
   </script>
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-<script src="weather.js"></script>
 <script src="script.js"></script>
+<script src="map.js"></script>
 <!-- <script src="countries.php"></script> -->
 
 </body>

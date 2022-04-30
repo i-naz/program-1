@@ -1,5 +1,7 @@
 <?php
-$url="https://api.openweathermap.org/data/2.5/weather?q=london&appid=2b16fa862a1ca44e187917563c894ed3";
+if(isset($_POST['city'])){
+	
+$url="https://api.openweathermap.org/data/2.5/weather?q=".$_POST['city']."&appid=2b16fa862a1ca44e187917563c894ed3";
 
 $ch=curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -20,4 +22,5 @@ $decode = json_decode($result,true);
 	header('Content-Type: application/json; charset=UTF-8');
 
 	echo json_encode($output); 
+}
 ?>
